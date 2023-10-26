@@ -11,6 +11,12 @@ const isBetween0and10 = (num1) => {
     }
 }
 
+/*LA MEJOR POR REDACCIÓN*/ 
+
+const isBetween0and10 = (num1) => {
+    return(num1 >= 0 && num1 <= 10)
+}
+
 if (isBetween0and10(1)) {
     console.log('Hola, ¡sí estoy entre el número 0 y 10!')
 } else {
@@ -22,10 +28,7 @@ Crea una función que me diga si un parámetro es de tipo cadena de texto o núm
 */
 
 const isType = (num1) => {
-    if(num1 === 2){
-        return Number;
-    } else (num1 === 'Hola');
-        return String;
+    return (typeof num1 === 'string' || typeof num1 === 'number')
 }
 
 /*
@@ -34,27 +37,8 @@ me dirá "true" en todas las variantes mayúsculas/minúsculas de este texto: 'P
 */
 
 const isEqual1 = (text1) => {
-    if (text1.toLowerCase() === 'pending'){
-        return true;
-    } else {
-        return false;
-    }
-}
-
-if (isEqual1('Pending')) {
-    console.log('¡Hola! Soy pending.')
-} else {
-    console.log('¡Hola! No soy pending.')
-}
-
-
-const isEqual2 = (text1) => {
-    if(text1.localeCompare('pending')){
-        return true;
-    } else {
-        return false;
-    }
-}
+    return text1.toLowerCase() === 'pending';
+} 
 
 /*
   Crea una función que simule una compra con tarjeta de crédito. Tendrá tres parámetros: 
@@ -66,16 +50,23 @@ const isEqual2 = (text1) => {
   en pantalla un mensaje diciendo que no se puede comprar por llegar al límite mensual.
 */
 
+function compraTarjeta (precioProducto, dineroGastado, limiteMensual) {
+    const totalGastado = precioProducto + dineroGastado;
+
+    if (totalGastado <= limiteMensual) {
+        return totalGastado;
+    } 
+
+    return ('No se puede realizar la compra por límite mensual')
+    
+}
+
 /*
   Crea una función que indique si un número es par o impar.
 */
 
 const isEvenorOdd = (num1) => {
-    if(num1 % 2 == 0){
-        return 'Even';
-    } else {
-        return 'Odd';
-    }
+    return num1 % 2 === 0;
 }
 
 /*
@@ -97,7 +88,9 @@ const wichIsMore1 = (num1, num2) => {
 const wichIsMore2 = (num1, num2, num3) => {
     if (num1 >= num2 && num1 >= num3) {
         return num1;
-    } else if (num2 >= num1 && num2 >= num3) {
+    } 
+    
+    if (num2 >= num1 && num2 >= num3) {
         return num2;
     } else {
         return num3;
@@ -107,9 +100,27 @@ const wichIsMore2 = (num1, num2, num3) => {
 /*
   Crea una función que, dados dos edades, te diga cuántos años hay entre ellas
 */
+/*Por acabar*/
 
 const wichDifferenceBetweenAges = (num1, num2) => {
-    if (x = num1 % num2) {
-        return x;
-    }
+    return Math.abs(num1 - num2);
 }
+
+
+const wichVehicle = (wheel, engine, hasPedals) => {
+    if (wheel === 4 && hasPedals && (engine === 'electric' || engine === 'gas')) {
+        return car;
+    } 
+    if (wheel === 2 && hasPedals && engine === 'gas') {
+        return motorbike;
+    } 
+    if (wheel === 2 && hasPedals && (engine === 'electric' || engine === 'manual')) {
+        return Bicycle;
+    } 
+    if (wheel === 4 && hasPedals && (engine === 'electric' || engine === 'manual')) {
+        return Skate;
+    } 
+    return 'desconocido';
+}
+
+/*Hacer un objeto y pasar la anterior función con ese objeto*/
