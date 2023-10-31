@@ -218,24 +218,32 @@ console.log(totalPrice); //Será 31
 const usuario = {
     name: 'Juan',
     email: 'juan@papa.com',
-    brand: 'patata'
+    brand: ['patata']
 }
 
 const usuario1 = {
     name: 'Manolo',
     email: 'manolo@tomate.com',
-    brand: 'tomate'
+    brand: ['tomate']
 }
 
 const usuario2 = {
-    name: `María`,
     email: 'maria@berengena.com',
-    brand: 'berengena'
+    brand: ['berengena']
 }
 
 
-const usuarios [
+const usuarios = [
     usuario,
     usuario1,
     usuario2
 ]
+
+
+const findTextInArray = (searchString) => {
+    return usuarios.filter(function(user) {
+        return user.name.include(searchString);
+    });
+}
+
+console.log(searchUsers(''))
