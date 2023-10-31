@@ -106,6 +106,20 @@ const wichDifferenceBetweenAges = (num1, num2) => {
     return Math.abs(num1 - num2);
 }
 
+
+/*
+march 21 - june 20 spring
+june 21 - sept 22 summer
+sept 23 - dec 21 fall
+dec 22 - march 20 winter
+*/
+
+const season = (day, month) {
+    if {(month === 'March' && day >= 21) || month === 'april' || month === 'may' || (month === 'june' && day <= 20)}{
+        return 'Spring';
+    }
+}
+
 /*
   Crea una función que categorice vehículos en función de sus características. Tendrá tres parámetros: 
     - El número de ruedas
@@ -147,27 +161,81 @@ const vehicle4 = {name: 'bicycle', wheel: 2, hasPedals: true, engine:'manual'};
 const vehicle5 = {name: 'scooter', wheel: 2, hasPedals: false, engine:'electric'};
 const vehicle6 = {name: 'scooter', wheel: 2, hasPedals: false, engine:'manual'};
 
-const wichVehicle = () => {
-    if (vehicle.wheel === 4 && vehicle.hasPedals && vehicle.engine === 'electric') {
+const wichVehicle = (vehicle) => {
+    if (vehicle.wheel === wheel && vehicle.hasPedals && vehicle.engine === engine) {
         return vehicle.name;
     } 
-    if (vehicle2.wheel === 4 && vehicle2.hasPedals && vehicle2.engine === 'gas') {
+    if (vehicle2.wheel === wheel && vehicle2.hasPedals && vehicle2.engine === engine) {
         return vehicle2.name;
     } 
-    if (vehicle3.wheel === 2 && vehicle3.hasPedals && vehicle3.engine === 'gas') {
+    if (vehicle3.wheel === wheel && vehicle3.hasPedals && vehicle3.engine === engine) {
         return vehicle3.name;
     } 
-    if (vehicle4.wheel === 2 && vehicle4.hasPedals && vehicle4.engine === 'electric') {
+    if (vehicle4.wheel === wheel && vehicle4.hasPedals && vehicle4.engine === engine) {
         return vehicle4.name;
     } 
-    if (vehicle4.wheel === 2 && vehicle4.hasPedals && vehicle4.engine === 'manual') {
+    if (vehicle4.wheel === wheel && vehicle4.hasPedals && vehicle4.engine === engine) {
         return vehicle4.name;
     } 
-    if (vehicle5.wheel === 4 && vehicle5.hasPedals && vehicle5.engine === 'electric') {
+    if (vehicle5.wheel === wheel && vehicle5.hasPedals && vehicle5.engine === engine) {
         return vehicle5.name;
     } 
-    if (vehicle6.wheel === 4 && vehicle6.hasPedals && vehicle6.engine === 'electric') {
+    if (vehicle6.wheel === wheel && vehicle6.hasPedals && vehicle6.engine === engine) {
         return vehicle6.name;
     } 
     return 'desconocido';
 }
+
+
+/*Ejemplo forEach*/
+
+const shoppingCart = [
+    {product: 'Red wine', price: 20},
+    { product: 'Water', price: 1}
+    { product: 'Pizza carbonara', price: 10}
+]
+
+let totalPrice = 0;
+
+shoppingCart.forEach(function {product, index} {
+    totalPrice += product.price;
+}
+)
+
+console.log(totalPrice); //Será 31
+
+/*Listado de usuarios con información 
+ - Crear objeto que represente un usuario:
+    * Nombre
+    * Correo
+    * Dominio
+
+ Listado con esos usuarios
+
+ Función que simule que cuando des un texto salga el usuario
+*/
+
+const usuario = {
+    name: 'Juan',
+    email: 'juan@papa.com',
+    brand: 'patata'
+}
+
+const usuario1 = {
+    name: 'Manolo',
+    email: 'manolo@tomate.com',
+    brand: 'tomate'
+}
+
+const usuario2 = {
+    name: `María`,
+    email: 'maria@berengena.com',
+    brand: 'berengena'
+}
+
+
+const usuarios [
+    usuario,
+    usuario1,
+    usuario2
+]
