@@ -106,6 +106,20 @@ const wichDifferenceBetweenAges = (num1, num2) => {
     return Math.abs(num1 - num2);
 }
 
+/*
+  Crea una función que categorice vehículos en función de sus características. Tendrá tres parámetros: 
+    - El número de ruedas
+    - El tipo de motor, debe ser gasolina, electrico o manual
+    - Si tiene pedales o no
+
+  Esta función debe devolver 'coche', 'moto', 'patinete', 'bicicleta' o 'desconocido':
+  - Los coches tienen 4 ruedas, no tienen pedales y pueden ser eléctricos o de gasolina.
+  - Las motos solo tienen 2 rueda, pueden ser de gasolina y no tienen pedales
+  - Las bicicletas solo tienen 2 ruedas y pueden ser eléctricas o manuales y tienen pedales.
+  - Los patinetes solo tienen 2 ruedas, pueden ser eléctricos o manuales y no tienen pedales pedales.
+  - En cualquier otro caso devuelve desconocido.
+*/
+
 
 const wichVehicle = (wheel, engine, hasPedals) => {
     if (wheel === 4 && hasPedals && (engine === 'electric' || engine === 'gas')) {
@@ -124,3 +138,36 @@ const wichVehicle = (wheel, engine, hasPedals) => {
 }
 
 /*Hacer un objeto y pasar la anterior función con ese objeto*/
+
+const vehicle = {name: 'car', wheel: 4, engine:'electric'};
+const vehicle1 = {name: 'car', wheel: 4, engine:'gas'};
+const vehicle2 = {name: 'motorbike', wheel: 2, hasPedals: true, engine:"gas"};
+const vehicle3 = {name: 'bicycle', wheel: 2, hasPedals: true, engine:'electric'};
+const vehicle4 = {name: 'bicycle', wheel: 2, hasPedals: true, engine:'manual'};
+const vehicle5 = {name: 'scooter', wheel: 2, hasPedals: false, engine:'electric'};
+const vehicle6 = {name: 'scooter', wheel: 2, hasPedals: false, engine:'manual'};
+
+const wichVehicle = () => {
+    if (vehicle.wheel === 4 && vehicle.hasPedals && vehicle.engine === 'electric') {
+        return vehicle.name;
+    } 
+    if (vehicle2.wheel === 4 && vehicle2.hasPedals && vehicle2.engine === 'gas') {
+        return vehicle2.name;
+    } 
+    if (vehicle3.wheel === 2 && vehicle3.hasPedals && vehicle3.engine === 'gas') {
+        return vehicle3.name;
+    } 
+    if (vehicle4.wheel === 2 && vehicle4.hasPedals && vehicle4.engine === 'electric') {
+        return vehicle4.name;
+    } 
+    if (vehicle4.wheel === 2 && vehicle4.hasPedals && vehicle4.engine === 'manual') {
+        return vehicle4.name;
+    } 
+    if (vehicle5.wheel === 4 && vehicle5.hasPedals && vehicle5.engine === 'electric') {
+        return vehicle5.name;
+    } 
+    if (vehicle6.wheel === 4 && vehicle6.hasPedals && vehicle6.engine === 'electric') {
+        return vehicle6.name;
+    } 
+    return 'desconocido';
+}
