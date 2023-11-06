@@ -247,3 +247,4 @@ const findTextInArray = (searchString) => {
 }
 
 console.log(searchUsers(''))
+
