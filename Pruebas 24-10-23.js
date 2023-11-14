@@ -358,3 +358,30 @@ function removeItem(shoppingCart, productName) {
     return newShoppingCart.filter(function());
 }
 
+
+
+//Ejercicio cambiar imágenes pares e impares DOM
+
+
+const allImg = document.querySelectorAll('img')
+
+allImg.forEach((image, index) => {
+    image.src = 'https://placekeanu.com/200/150'
+
+    if(index % 2 == 0){
+        image.src = 'https://i.blogs.es/4d5a9c/spiderman-4/840_560.jpeg'
+    }
+})
+
+//Pillar todos los elementos de los producto y separarlos por arrays
+
+const allImg = document.querySelectorAll('.a-section.background-white.octopus-dlp-body-component img')
+
+allImg.forEach((image) => {
+    image.src = 'https://i.blogs.es/4d5a9c/spiderman-4/840_560.jpeg'
+})
+
+//const allName = document.querySelectorAll('.a-section.octopus-dlp-asin-title a')
+//const allValoration = document.querySelectorAll('.a-section.octopus-dlp-asin-title a')
+//const allSale = document.querySelectorAll('.a-section.octopus-dlp-asin-title a')
+//const allPrice = document.querySelectorAll('.a-section.octopus-dlp-asin-title a')
